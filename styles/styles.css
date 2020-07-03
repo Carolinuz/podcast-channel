@@ -118,22 +118,22 @@ main {
     top: .8rem;
 }
 
-/* #btn-menu{
+#btn-menu{
     display: none;
 }
 
 .menu__row{
     display:none;
-}*/
+}
 /* Tengo que arreglar la transformacion del menu hamburguesa */
-#btn-menu:checked ~ #spn1{
+#btn-menu:checked ~ .menu__label #spn1{
     transform: rotate(320deg);
     top: .3rem;
 }
-#btn-menu:checked ~ #spn2{
+#btn-menu:checked ~ .menu__label #spn2{
     opacity: 0;
 }
-#btn-menu:checked ~ #spn3{
+#btn-menu:checked ~ .menu__label #spn3{
     transform: rotate(-320deg);
     top: .3rem;
 }
