@@ -48,7 +48,14 @@ header {
     min-height: 4.4rem;
     display: flex;
     position: relative;
+    width: 100%;
+    background-color: #ffffff;
 }
+
+main {
+    padding-top: 4.4rem;
+}
+
 .header__logobox {
     position: absolute;
     top: 1rem;
@@ -56,6 +63,7 @@ header {
     justify-content: flex-start;
     display: inline;
 }
+
 .menu__row {
     margin-top: 4.4rem;
     min-width: 32rem;
@@ -63,6 +71,13 @@ header {
     height: 22.4rem;
     background-color:#0000EC;
 }
+
+.menu__list {
+    display: flex;
+    flex-flow: column nowrap;
+    list-style: none;
+}
+
 .menu__link {
     position: relative;
     list-style: none;
@@ -70,17 +85,11 @@ header {
     color: #ffffff;
     text-transform: uppercase;
     line-height: 2.8rem;
-    padding:2.4rem, 0;
-}
-.menu__list {
-    display: flex;
-    flex-flow: column nowrap;
-    list-style: none;
-}
-nav li a {
+    padding: 2.4rem, 0;
     display: block;
     margin: 1.6rem 0 .8rem 1.6rem;
 }
+
 
 /* Menú hamburguesa */
 .menu__label {
@@ -91,7 +100,8 @@ nav li a {
     height: 3rem;
     cursor: pointer;
 }
-.menu__label--spn {
+
+.menu__label #spn1,#spn2,#spn3 {
     position: absolute;
     content: '';
     background:#000000;
@@ -99,30 +109,35 @@ nav li a {
     height: .2rem;
     transition: all 500ms ease;
 }
-#menu___label--middle {
+
+#spn2 {
     top: .4rem;
 }
-#menu___label--bottom {
+
+#spn3 {
     top: .8rem;
 }
-#btn-menu{
+
+/* #btn-menu{
     display: none;
 }
+
 .menu__row{
     display:none;
-}
-#btn-menu:checked ~ .menu__label--top{
+}*/
+/* Tengo que arreglar la transformacion del menu hamburguesa */
+#btn-menu:checked ~ #spn1{
     transform: rotate(320deg);
     top: .3rem;
 }
-#btn-menu:checked ~ .menu__label--middle{
+#btn-menu:checked ~ #spn2{
     opacity: 0;
 }
-#btn-menu:checked ~ .menu__label--bottom{
+#btn-menu:checked ~ #spn3{
     transform: rotate(-320deg);
     top: .3rem;
 }
-#btn-menu:checked ~ .menu__list{
+#btn-menu:checked ~ .menu__row {
     display: block;
 }
 /* Fin menú hamburguesa*/
@@ -157,6 +172,15 @@ button:hover {
     min-width: 32rem;
     width: 100vw;
 }
+
+.entrevistas__container {
+    width: 32rem;
+    margin: 0 auto;
+  }
+  .entrevistas__img {
+    max-width: 100%;
+    }
+
 @media screen and (min-width: 78.8rem){
 
 .blue-dot {
