@@ -14,11 +14,13 @@ body {
     flex-flow: column nowrap;
     font-family: 'IBM Plex Mono', monospace;
     box-sizing: content-box;
+    color: #060A24;
 }
 .heading-primary {
     font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 400;
     color: #060A24;
-    font-size: 3.5rem;
+    font-size: 3.6rem;
     margin-left: 1.6rem;
     margin-right: 1.6rem;
     line-height: 4.2rem;
@@ -30,38 +32,48 @@ body {
 .paragraph {
     font-family: 'IBM Plex Mono', monospace;
     font-size: 1.4rem;
+    line-height: 2.2rem;
     margin-left: 1.6rem;
     margin-right: 1.6rem;
-    line-height: 2.2rem;
+}
+.paragraph--alt {
+    display: none;
 }
 
+.paragraph--top {
+    margin-top: 1.6rem;
+    margin-bottom: 3.6rem;
+}
+
+.paragraph--bottom {
+    margin-top: .8rem;
+    margin-bottom: 5.4rem;
+}
 
 .spotify-pod {
-        border-width: 0rem;
-        width: 100%;
-        height: 23.2rem;
-        margin: 1.1rem 0;
+    border-width: 0rem;
+    width: 100%;
+    height: 23.2rem;
 }
 
 header {
     min-width: 32rem;
     min-height: 4.4rem;
     display: flex;
-    position: relative;
+    position: fixed;
     width: 100%;
     background-color: #ffffff;
+    justify-content: flex-end;
 }
 
 main {
-    padding-top: 4.4rem;
+    padding-top: 7.3rem;
 }
 
 .header__logobox {
     position: absolute;
     top: 1rem;
     left: 1.6rem;
-    justify-content: flex-start;
-    display: inline;
 }
 
 .menu__row {
@@ -84,6 +96,7 @@ main {
     text-decoration: none;
     color: #ffffff;
     text-transform: uppercase;
+    font-size: 1.6rem;
     line-height: 2.8rem;
     padding: 2.4rem, 0;
     display: block;
@@ -96,8 +109,8 @@ main {
     position: absolute;
     top: 1.6rem;
     right: 1.9rem;
-    width: 4rem;
-    height: 3rem;
+    width: 1.8rem;
+    height: 1rem;
     cursor: pointer;
 }
 
@@ -107,7 +120,7 @@ main {
     background:#000000;
     width: 1.8rem;
     height: .2rem;
-    transition: all 500ms ease;
+    transition: all 600ms ease;
 }
 
 #spn2 {
@@ -125,15 +138,15 @@ main {
 .menu__row{
     display:none;
 }
-/* Tengo que arreglar la transformacion del menu hamburguesa */
-#btn-menu:checked ~ .menu__label #spn1{
+
+#btn-menu:checked ~ .menu__label .menu__span--top{
     transform: rotate(320deg);
     top: .3rem;
 }
-#btn-menu:checked ~ .menu__label #spn2{
+#btn-menu:checked ~ .menu__label .menu__span--middle{
     opacity: 0;
 }
-#btn-menu:checked ~ .menu__label #spn3{
+#btn-menu:checked ~ .menu__label .menu__span--bottom{
     transform: rotate(-320deg);
     top: .3rem;
 }
@@ -146,7 +159,7 @@ main {
 button {
     background-color: #00F3BB;
     font-family: 'IBM Plex Mono', monospace;
-    font-weight: 600;
+    font-weight: 500;
     min-width: 28.8rem;
     min-height: 4.8rem;
     color: #060A24;
@@ -158,16 +171,36 @@ button {
     align-items: center;
     transition: ease-in 1s;
     cursor: pointer;
+    margin: 0 1.6rem;
 }
 
 button:hover {
     background-image: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);
     color: #ffffff;
 }
-.mob-phone {
-    left: -2rem;
-    width: 36rem;
+
+.episodios {
+    margin-top: 4.2rem;
+    padding: 5rem 0;
+    background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
+    background-size: cover;
+    transform: skewY(-7deg);
 }
+.episodios > * {
+    transform: skewY(7deg); 
+}
+
+.episodios__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 2.1rem auto 0 auto;
+    padding-bottom: 14.35rem;
+}
+
+
+
+
 .img-invitado {
     min-width: 32rem;
     width: 100vw;
@@ -175,18 +208,92 @@ button:hover {
 
 .entrevistas__container {
     width: 32rem;
-    margin: 0 auto;
-  }
-  .entrevistas__img {
-    max-width: 100%;
-    }
+    margin: 1.4rem auto 4.8rem auto;
+}
 
-@media screen and (min-width: 78.8rem){
+.entrevistas__img {
+    max-width: 100%;
+}
+
+.nosotros__img-box {
+    min-width: 36rem;
+    text-align: center;
+    margin: -12rem auto 2.7rem -2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.nosotros__img {
+    width: 100%;
+}
+
+.nuest-temas__container {
+    margin-top: 3.7rem;
+    margin-bottom: 4.2rem;
+}
+.nuest-temas__fig {
+    margin-bottom: 5.2rem;
+}
+.nuest-temas__title {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 600;
+    font-size: 2.4rem;
+    margin-top: 1.3rem;
+}
+
+.novedades {
+    padding-top: 6rem;
+    min-height: 32rem;
+    background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
+    background-size: cover;
+    transform: skewY(-7deg);
+    margin-bottom: -3rem;
+}
+  .novedades > * {
+    transform: skewY(7deg); 
+}
+
+.footer {
+    height: 12.1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.4rem;
+    background-color: #ffffff;
+    position:relative;
+    z-index: 2;
+    justify-content: center;
+}
+
+.footer__iconbox {
+    font-size: 1.6rem;
+    display: flex;
+    justify-content: space-between;
+    margin: 1.6rem 4.5rem 0 4.5rem;
+}
+
+.footer__iconbox .icon {
+    color: #060A24;
+}
+@media screen and (min-width: 720px){
+    
+.header__logobox {
+    position: absolute;
+    top: 2.2rem;
+    left: 10rem;
+}
 
 .blue-dot {
     color: #0000EC;
 }
 
+.paragraph--top {
+    display: none;
+}
+
+.paragraph--alt {
+    display: inline-block;
+}
 a {
     text-decoration: none;
     color: blueviolet;
@@ -199,10 +306,51 @@ nav a:active {
     text-decoration: line-through;
     color: #8F060A24;
 }
+.menu__label {
+    display: none;
+}
+.menu {
+    display: flex;
+    width: 100vh;
+    justify-content: flex-end;
+    
+}
+.menu__row {
+    all: unset;
+    display: flex;
+    background-color:#FFFFFF;
+    height: auto;
+}
+
+.menu__list {
+    display: flex;
+    flex-flow: row nowrap;
+    list-style: none;
+    margin: 2.6rem 10rem 0 0;
+    margin-right: 10rem;
+}
+.menu__link {
+    color: #060A24;
+    display: inline-block;
+    margin: 0;
+}
+.menu__list-item:not(:last-child) {
+    margin-right: 4.8rem;
+}
+
+.spotify-pod {
+    border-width: 0rem;
+    max-width: 54.8rem;
+    width: 100%;
+    height: 23.2rem;
+    margin: 1.1rem 0;
+}
+
 }
 
 /* Utility classes */
 .u-text-center {text-align: center;}
 .u-margin-small {margin: 1.6rem;}
-.u-strikethrough {text-decoration: line-through;
-}
+.u-margin-top {margin-top: 3.6rem;}
+.u-margin-bottom-sm {margin-bottom: .8rem;}
+.u-strikethrough {text-decoration: line-through;}

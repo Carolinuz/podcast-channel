@@ -26,10 +26,10 @@
             <!-- Links menú navegacion -->
             <div class="menu__row">
                 <ul class="menu__list">
-                    <li><a href="#episodios" class="menu__link" tabindex="1">Episodios</a></li>
-                    <li><a href="#nosotros" class="menu__link" tabindex="2">Nosotros</a></li>
-                    <li><a href="#entrevistas" class="menu__link" tabindex="3">Entrevistas</a></li>
-                    <li><a href="#topicos" class="menu__link" tabindex="4">Tópicos</a></li>
+                    <li class="menu__list-item"><a href="#episodios" class="menu__link" tabindex="1">Episodios</a></li>
+                    <li class="menu__list-item"><a href="#nosotros" class="menu__link" tabindex="2">Nosotros</a></li>
+                    <li class="menu__list-item"><a href="#entrevistas" class="menu__link" tabindex="3">Entrevistas</a></li>
+                    <li class="menu__list-item"><a href="#topicos" class="menu__link" tabindex="4">Tópicos</a></li>
                 </ul>
             </div>
         </nav>
@@ -37,7 +37,8 @@
     <main>
         <section class="welcome">
             <h1 class="heading-primary">Hello <span class="u-strikethrough">world</span> pale blue dot<span class="blue-dot">.</span></h1>
-            <p class="paragraph">Un podcast que explora el mundo de la programación. Nuevos episodios, todos los jueves cada 15 días.</p>
+            <p class="paragraph paragraph--top">Un podcast que explora el mundo de la programación. Nuevos episodios, todos los jueves cada 15 días.</p>
+            <p class="paragraph paragraph--alt">El portal de podcasts que explora el mundo de la programación y la tecnología. Nuevos episodios, todos los jueves cada 15 días.</p>
             <button type="button" class="button" tabindex="5">CONOCÉ MÁS</button>
         </section>
         <section class="episodios" id="episodios">
@@ -50,9 +51,11 @@
             </div>
         </section>
         <section class="nosotros" id="nosotros">
-            <img src="./images/phone.png" class="nosotros__img" alt="telefono móvil">
+            <div class="nosotros__img-box">
+                <img src="./images/phone.png" class="nosotros__img" alt="telefono móvil">
+            </div>
             <h2 class="heading-primary">De Dónde venimos</h2>
-            <p class="paragraph">Our posturings, our imagined self-importance, the delusion that we have some privileged position in the Universe, are challenged by this point of pale light. <br><br>
+            <p class="paragraph paragraph--bottom">Our posturings, our imagined self-importance, the delusion that we have some privileged position in the Universe, are challenged by this point of pale light. <br><br>
             Our planet is a lonely speck in the great enveloping cosmic dark. In our obscurity, in all this vastness, there is no hint that help will come from elsewhere to save us from ourselves.</p>
         </section>
         <section class="entrevistas">
@@ -75,7 +78,7 @@
                     </figure>
                     <figure class="nuest-temas__fig">
                         <img src="./images/icon2.svg" alt="Repensando la programación" class="nuest-temas__img">
-                        <figcaption class="nuest-temas__title">Repensando la programacion</figcaption>
+                        <figcaption class="nuest-temas__title">Repensando la programación</figcaption>
                     </figure>
                     <figure class="nuest-temas__fig">
                         <img src="./images/icon3.svg" alt="Bases del código" class="nuest-temas__img">
@@ -88,8 +91,8 @@
                 </div>
         </section>
         <section class="novedades">
-            <h2 class="heading-primary u-text-center">¿Quieres las últimas novedades?</h2>
-            <button class="button">ESCUCHÁ LOS EPISODIOS</button>
+            <h2 class="heading-primary u-text-center heading-primary--white">¿Querés las últimas novedades?</h2>
+            <button class="button u-margin-top">ESCUCHÁ LOS EPISODIOS</button>
         </section>
     </main>
     <footer class="footer">
