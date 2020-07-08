@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;600&display=swap');
+
 * {
     margin: 0px;
     padding: 0px;
@@ -13,68 +15,42 @@ body {
     display: flex;
     flex-flow: column nowrap;
     font-family: 'IBM Plex Mono', monospace;
-    box-sizing: content-box;
+    box-sizing: border-box;
     color: #060A24;
 }
-.heading-primary {
-    font-family: 'IBM Plex Sans', sans-serif;
-    font-weight: 400;
-    color: #060A24;
-    font-size: 3.6rem;
-    margin-left: 1.6rem;
-    margin-right: 1.6rem;
-    line-height: 4.2rem;
-}
-.heading-primary--white {
-    color: #ffffff;
-}
 
-.paragraph {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 1.4rem;
-    line-height: 2.2rem;
-    margin-left: 1.6rem;
-    margin-right: 1.6rem;
-}
-.paragraph--alt {
-    display: none;
-}
+/* Utility classes */
+.u-text-center {text-align: center;}
+.u-margin-small {margin: 1.6rem;}
+.u-margin-top {margin-top: 3.6rem;}
+.u-margin-bottom-sm {margin-bottom: .8rem;}
+.u-strikethrough {text-decoration: line-through;}
 
-.paragraph--top {
-    margin-top: 1.6rem;
-    margin-bottom: 3.6rem;
-}
+ /* Header */
 
-.paragraph--bottom {
-    margin-top: .8rem;
-    margin-bottom: 5.4rem;
-}
-
-.spotify-pod {
-    border-width: 0rem;
-    width: 100%;
-    height: 23.2rem;
-}
-
-header {
+.header {
     min-width: 32rem;
-    min-height: 4.4rem;
+    height: 4.4rem;
     display: flex;
     position: fixed;
     width: 100%;
     background-color: #ffffff;
     justify-content: flex-end;
-}
-
-main {
-    padding-top: 7.3rem;
+    z-index: 2;
 }
 
 .header__logobox {
     position: absolute;
     top: 1rem;
     left: 1.6rem;
+    width: 24px;
 }
+
+.header__logo {
+    width: 100%;
+}
+
+/*Nav menu */
 
 .menu__row {
     margin-top: 4.4rem;
@@ -98,13 +74,12 @@ main {
     text-transform: uppercase;
     font-size: 1.6rem;
     line-height: 2.8rem;
-    padding: 2.4rem, 0;
     display: block;
     margin: 1.6rem 0 .8rem 1.6rem;
 }
 
+/* Hamburguer menu */
 
-/* Menú hamburguesa */
 .menu__label {
     position: absolute;
     top: 1.6rem;
@@ -140,118 +115,162 @@ main {
 }
 
 #btn-menu:checked ~ .menu__label .menu__span--top{
-    transform: rotate(320deg);
+    transform: rotate(140deg);
     top: .3rem;
 }
+
 #btn-menu:checked ~ .menu__label .menu__span--middle{
     opacity: 0;
 }
+
 #btn-menu:checked ~ .menu__label .menu__span--bottom{
-    transform: rotate(-320deg);
+    transform: rotate(-140deg);
     top: .3rem;
 }
+
 #btn-menu:checked ~ .menu__row {
     display: block;
 }
-/* Fin menú hamburguesa*/
 
-
-button {
-    background-color: #00F3BB;
-    font-family: 'IBM Plex Mono', monospace;
-    font-weight: 500;
-    min-width: 28.8rem;
-    min-height: 4.8rem;
-    color: #060A24;
-    border: 0rem;
-    display: flex;
-    flex-basis: 28.4rem;
-    font-size: 1.6rem;
-    justify-content: center;
-    align-items: center;
-    transition: ease-in 1s;
-    cursor: pointer;
-    margin: 0 1.6rem;
+#btn-menu:hover ~ .menu__label #spn1 {
+    background: #0000EC;
 }
 
-button:hover {
-    background-image: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);
-    color: #ffffff;
+#btn-menu:hover ~ .menu__label #spn2 {
+    background: #0000EC;
 }
 
-.episodios {
+#btn-menu:hover ~ .menu__label #spn3{
+    background: #0000EC;
+}
+
+/* End of Hamburguer Menu */
+
+/* Main section */
+main {
+    padding-top: 7.3rem;
+}
+
+ /* Episodes section */
+ .episodios {
     margin-top: 4.2rem;
     padding: 5rem 0;
     background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
     background-size: cover;
     transform: skewY(-7deg);
 }
+
 .episodios > * {
     transform: skewY(7deg); 
 }
 
 .episodios__container {
     display: flex;
-    flex-direction: column;
+    flex-flow: row wrap;
     justify-content: center;
     margin: 2.1rem auto 0 auto;
     padding-bottom: 14.35rem;
 }
 
-
-
-
-.img-invitado {
+ .episodios__spotifybox {
     min-width: 32rem;
-    width: 100vw;
+    width: 58.4rem;
+    display: flex;
+    justify-content: center;
 }
 
-.entrevistas__container {
+.spotify-pod {
+    border-width: 0rem;
     width: 32rem;
-    margin: 1.4rem auto 4.8rem auto;
+    height: 23.2rem;
+    margin-bottom: .8rem;
 }
 
-.entrevistas__img {
-    max-width: 100%;
+.spotify-pod:not(:last-child) {
+    margin-bottom: 1.1rem;
 }
 
-.nosotros__img-box {
-    min-width: 36rem;
-    text-align: center;
-    margin: -12rem auto 2.7rem -2rem;
+/* About us section */
+
+.nosotros {
+    margin-top: -15rem;
     position: relative;
     z-index: 1;
 }
 
+.nosotros__img-box {
+    min-width: 360px;
+    max-width: 45.8rem;
+    margin-left: -2rem;
+    margin-bottom: 2.7rem;
+}
+
 .nosotros__img {
+    width: 100%
+}
+
+/* Interviews section */
+
+.entrevistas__container {
+    justify-content: center;
+    margin: 1.4rem auto 4.8rem auto;
+    display: flex;
+    flex-flow: row wrap;
+    min-width: 32rem;
+}
+
+.entrevistas__img-box {
+    display: flex;
+    min-width: 32rem;
+    max-width: 48rem;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.entrevistas__img {
     width: 100%;
 }
+
+/* Our topics */
 
 .nuest-temas__container {
     margin-top: 3.7rem;
     margin-bottom: 4.2rem;
+    display: flex;
+    justify-content: space-evenly;
+    flex-flow: row wrap;
 }
+
 .nuest-temas__fig {
-    margin-bottom: 5.2rem;
+    margin: 0 1rem 5.2rem 1rem;
+    width: 20rem;
 }
+
 .nuest-temas__title {
     font-family: "IBM Plex Sans", sans-serif;
     font-weight: 600;
+    line-height: 3.2rem;
     font-size: 2.4rem;
     margin-top: 1.3rem;
 }
 
+/* News */
+
 .novedades {
     padding-top: 6rem;
-    min-height: 32rem;
+    min-height: 36rem;
     background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
     background-size: cover;
-    transform: skewY(-7deg);
     margin-bottom: -3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    -webkit-clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
 }
-  .novedades > * {
-    transform: skewY(7deg); 
-}
+
+/* Footer */
 
 .footer {
     height: 12.1rem;
@@ -263,6 +282,7 @@ button:hover {
     position:relative;
     z-index: 2;
     justify-content: center;
+    align-items:center;
 }
 
 .footer__iconbox {
@@ -270,51 +290,95 @@ button:hover {
     display: flex;
     justify-content: space-between;
     margin: 1.6rem 4.5rem 0 4.5rem;
+    width: 19.2rem;
 }
 
 .footer__iconbox .icon {
     color: #060A24;
 }
-@media screen and (min-width: 720px){
-    
+
+/* Reusable Blocks  */
+
+.heading-primary {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 400;
+    color: #060A24;
+    font-size: 3.6rem;
+    margin-left: 1.6rem;
+    margin-right: 1.6rem;
+    line-height: 4.2rem;
+}
+    .heading-primary--white {
+        color: #ffffff;
+    }
+
+.paragraph {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+    margin-left: 1.6rem;
+    margin-right: 1.6rem;
+}
+    .paragraph--alt {
+        display: none;
+    }
+    .paragraph--top {
+        margin-top: 1.6rem;
+        margin-bottom: 3.6rem;
+    }
+    .paragraph--bottom {
+        margin-top: .8rem;
+        margin-bottom: 5.4rem;
+    }
+
+.button {
+    background-color: #00F3BB;
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 500;
+    width: 28.8rem;
+    height: 4.8rem;
+    color: #060A24;
+    border: 0rem;
+    font-size: 1.6rem;
+    transition: ease-in 1s;
+    cursor: pointer;
+    margin: 0 1.6rem;
+}
+    .button:hover {
+        background-image: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);
+        color: #ffffff;
+    }
+    .button--large {
+        margin-top: 3.6rem;
+    }
+@media screen and (min-width: 768px){
+
+/* Header */
+
+.header {
+    height: 8rem;
+    width: 100vw;
+}
+
 .header__logobox {
     position: absolute;
     top: 2.2rem;
     left: 10rem;
+    width: 36px;
 }
 
-.blue-dot {
-    color: #0000EC;
-}
+/* Menu */
 
-.paragraph--top {
-    display: none;
-}
-
-.paragraph--alt {
-    display: inline-block;
-}
-a {
-    text-decoration: none;
-    color: blueviolet;
-}
-nav a:hover {
-    text-decoration: line-through;
-    color: #00F3BB;
-}
-nav a:active {
-    text-decoration: line-through;
-    color: #8F060A24;
-}
-.menu__label {
-    display: none;
-}
 .menu {
     display: flex;
     width: 100vh;
-    justify-content: flex-end;
-    
+    justify-content: flex-end;   
 }
+
+.menu__label {
+    display: none;
+}
+
 .menu__row {
     all: unset;
     display: flex;
@@ -329,28 +393,175 @@ nav a:active {
     margin: 2.6rem 10rem 0 0;
     margin-right: 10rem;
 }
-.menu__link {
-    color: #060A24;
-    display: inline-block;
-    margin: 0;
-}
+
 .menu__list-item:not(:last-child) {
     margin-right: 4.8rem;
 }
 
+.menu__link {
+    text-decoration: none;
+    color: #060A24;
+    color: #060A24;
+    display: inline-block;
+    margin: 0;
+}
+
+.menu__link:hover {
+    text-decoration: line-through;
+    color: #00F3BB;
+}
+
+.menu__link:active {
+    text-decoration: line-through;
+    color: #8F060A24;
+}
+
+/* Welcome section */
+
+.welcome {
+    margin-top: 12rem;
+}
+
+.blue-dot {
+    color: #0000EC;
+}
+
+/* Episodes section */
+
+.episodios {
+    padding-top: 12rem;
+}
+
+.episodios__container {
+    justify-content: space-evenly;
+    padding-bottom: 0rem;
+}
+
 .spotify-pod {
-    border-width: 0rem;
-    max-width: 54.8rem;
-    width: 100%;
+    width: 58.4rem;
     height: 23.2rem;
-    margin: 1.1rem 0;
+    margin-bottom: 7.2rem;
 }
+
+/* About us section */
+
+.nosotros {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    margin-top: -5rem;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 104rem;
+}
+
+.nosotros__textbox--big {
+    margin-top: 15rem;
+}
+
+.nosotros__img-box {
+    margin-right: 6.4rem;
+    margin-bottom: 6.4rem;
+}
+/* Interviews section */
+
+.entrevistas__container {
+    margin-top: 3.6rem;
+}
+
+.entrevistas__img-box {
+    display: flex;
+    flex-basis: 48rem;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.entrevistas__img {
+    width: 100%;
+}
+
+/* Our topics */
+
+/* News */
+
+.novedades {
+    min-height: 51.8rem;
+    justify-content: center;
+    -webkit-clip-path: polygon(0 25%, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 25%, 100% 0, 100% 100%, 0% 100%);
+}
+
+/* Footer */
+
+.footer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10rem;
+    font-size: 1.6rem;
+}
+
+.footer__iconbox {
+    font-size: 1.8rem;
+    display: flex;
+    width: 19.6rem;
+    margin: 0;
+}
+
+/* Reusable Blocks  */
+
+.heading-primary {
+    font-size: 4.8rem;
+}
+    .heading-primary--title {
+        font-size: 6.4rem;
+        line-height: 8.4rem;
+    }
+
+.paragraph {
+    font-size: 1.6rem;
+}
+    .paragraph--top {
+        display: none;
+    }
+    .paragraph--alt {
+        display: block;
+        margin-bottom: 5.6rem;
+    }
+    .paragraph--bottom {
+        margin-top: 3rem;
+    }
+
+.button {
+    width: 22.6rem;
+    height: 5.6rem;
+}
+    .button--large {
+        width: 34.5rem;
+        height: 5.6rem;
+    }
+
+
+/* Utility classes for 768 and up resolutions */
+.u-margin-xl {margin-left: 20rem;}
 
 }
 
-/* Utility classes */
-.u-text-center {text-align: center;}
-.u-margin-small {margin: 1.6rem;}
-.u-margin-top {margin-top: 3.6rem;}
-.u-margin-bottom-sm {margin-bottom: .8rem;}
-.u-strikethrough {text-decoration: line-through;}
+/* @media screen and (min-width: 1367px){
+.episodios__container {
+    justify-content: space-between;
+    align-content: space-between;
+    padding-bottom: 6.4rem;
+    margin: 2.1rem 10rem 0 10rem;
+    min-height: 57.2rem;
+    width: 124rem;
+    margin: 0 auto;
+}
+
+.spotify-pod {
+    width: 58.4rem;
+    height: 23.2rem;
+}
+} */
+
+

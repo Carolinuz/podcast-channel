@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono%7CIBM+Plex+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous">    
     <link rel='stylesheet' type='text/css' media='screen' href='styles/styles.css'>
     <link rel="shortcut icon" href="./images/logo.svg" type="image/x-icon">
@@ -36,41 +35,63 @@
     </header>
     <main>
         <section class="welcome">
-            <h1 class="heading-primary">Hello <span class="u-strikethrough">world</span> pale blue dot<span class="blue-dot">.</span></h1>
+            <h1 class="heading-primary u-margin-xl heading-primary--title">Hello <span class="u-strikethrough">world</span> pale blue dot<span class="blue-dot">.</span></h1>
             <p class="paragraph paragraph--top">Un podcast que explora el mundo de la programación. Nuevos episodios, todos los jueves cada 15 días.</p>
-            <p class="paragraph paragraph--alt">El portal de podcasts que explora el mundo de la programación y la tecnología. Nuevos episodios, todos los jueves cada 15 días.</p>
-            <button type="button" class="button" tabindex="5">CONOCÉ MÁS</button>
+            <p class="paragraph paragraph--alt u-margin-xl">El portal de podcasts que explora el mundo de la programación y la tecnología<br>Nuevos episodios, todos los jueves cada 15 días.</p>
+            <button type="button" class="button u-margin-xl" tabindex="5">CONOCÉ MÁS</button>
         </section>
         <section class="episodios" id="episodios">
-            <h2 class="heading-primary heading-primary--white">Episodios</h2>
+            <h2 class="heading-primary heading-primary--white u-margin-xl">Episodios</h2>
             <div class="episodios__container">
-                <iframe class="spotify-pod" src="https://open.spotify.com/embed-podcast/show/2ySVrxGkN6n6frMTo9Nsrt" tabindex="6"></iframe> 
-                <iframe class="spotify-pod" src="https://open.spotify.com/embed-podcast/show/4kYCRYJ3yK5DQbP5tbfZby" tabindex="7"></iframe>
-                <iframe class="spotify-pod" src="https://open.spotify.com/embed-podcast/show/5JxcIaIkN8zx3Zy7yD9snv" tabindex="8"></iframe>
-                <iframe class="spotify-pod" src="https://open.spotify.com/embed-podcast/show/2Iibd5A6R7mxkCm4NwNmUn" tabindex="9"></iframe>
+                <div class="episodios__spotifybox">
+                    <iframe class="spotify-pod" src="https://open.spotify.com/embed-podcast/show/2ySVrxGkN6n6frMTo9Nsrt" tabindex="6"></iframe> 
+                </div>
+                <div class="episodios__spotifybox">
+                    <iframe class="spotify-pod" src="https://open.spotify.com/embed-podcast/show/4kYCRYJ3yK5DQbP5tbfZby" tabindex="7"></iframe>
+                </div>
+                <div class="episodios__spotifybox">
+                    <iframe class="spotify-pod" src="https://open.spotify.com/embed-podcast/show/5JxcIaIkN8zx3Zy7yD9snv" tabindex="8"></iframe>
+                </div>
+                <div class="episodios__spotifybox">
+                    <iframe class="spotify-pod" src="https://open.spotify.com/embed-podcast/show/2Iibd5A6R7mxkCm4NwNmUn" tabindex="9"></iframe>
+                </div>
             </div>
         </section>
-        <section class="nosotros" id="nosotros">
-            <div class="nosotros__img-box">
+        <section class="nosotros">
+            <div class="nosotros__img-box" id="nosotros">
                 <img src="./images/phone.png" class="nosotros__img" alt="telefono móvil">
             </div>
-            <h2 class="heading-primary">De Dónde venimos</h2>
-            <p class="paragraph paragraph--bottom">Our posturings, our imagined self-importance, the delusion that we have some privileged position in the Universe, are challenged by this point of pale light. <br><br>
-            Our planet is a lonely speck in the great enveloping cosmic dark. In our obscurity, in all this vastness, there is no hint that help will come from elsewhere to save us from ourselves.</p>
+            <div class="nosotros__textbox nosotros__textbox--big">
+                <h2 class="heading-primary">De dónde venimos</h2>
+                <p class="paragraph paragraph--bottom">Our posturings, our imagined self-importance, the delusion that we have some privileged position in the Universe, are challenged by this point of pale light. <br><br>
+                Our planet is a lonely speck in the great enveloping cosmic dark. In our obscurity, in all this vastness, there is no hint that help will come from elsewhere to save us from ourselves.</p>
+            </div>
         </section>
-        <section class="entrevistas">
-            <h2 class="heading-primary">Invitadas/os Estelares</h2>
-            <div class="entrevistas__container" id="entrevistas">
-                <img src="./images/grace-hopper.png" alt="Grace Hopper" class="entrevistas__img">
-                <img src="./images/Katie-Bouman.png" alt="Katie Bouman" class="entrevistas__img">
-                <img src="./images/Margaret_Hamilton.png" alt="Margaret Hamilton" class="entrevistas__img">
-                <img src="./images/Univac-computer.png" alt="Computadora Univac 1103 - Oficina E.R.A. - 1950" class="entrevistas__img">
-                <img src="./images/eniac-programmable.png" alt="Mujeres operando una computadora Eniac - Primer computadora programable" class="entrevistas__img">
-                <img src="./images/susan-kare.png" alt="Susan Kare" class="entrevistas__img">
+        <section class="entrevistas" id="entrevistas">
+            <h2 class="heading-primary u-margin-xl">Invitadas/os Estelares</h2>
+            <div class="entrevistas__container" >
+                <div class="entrevistas__img-box">
+                    <img src="./images/grace-hopper.png" alt="Grace Hopper" class="entrevistas__img">
+                </div>
+                <div class="entrevistas__img-box">
+                    <img src="./images/Katie-Bouman.png" alt="Katie Bouman" class="entrevistas__img">
+                </div>
+                <div class="entrevistas__img-box">
+                    <img src="./images/Margaret_Hamilton.png" alt="Margaret Hamilton" class="entrevistas__img">
+                </div>
+                <div class="entrevistas__img-box">
+                    <img src="./images/Univac-computer.png" alt="Computadora Univac 1103 - Oficina E.R.A. - 1950" class="entrevistas__img">
+                </div>
+                <div class="entrevistas__img-box">
+                    <img src="./images/eniac-programmable.png" alt="Mujeres operando una computadora Eniac - Primer computadora programable" class="entrevistas__img">
+                </div>
+                <div class="entrevistas__img-box">
+                    <img src="./images/susan-kare.png" alt="Susan Kare" class="entrevistas__img">
+                </div>
             </div>
         </section>
         <section class="nuest-temas" id="topicos">
-            <h2 class="heading-primary">Algunos de nuestros temas</h2>
+            <h2 class="heading-primary u-margin-xl">Algunos de nuestros temas</h2>
             <div class="nuest-temas__container u-text-center">
                     <figure class="nuest-temas__fig">
                         <img src="./images/icon1.svg" alt="Trabajo remoto" class="nuest-temas__img">
@@ -78,7 +99,7 @@
                     </figure>
                     <figure class="nuest-temas__fig">
                         <img src="./images/icon2.svg" alt="Repensando la programación" class="nuest-temas__img">
-                        <figcaption class="nuest-temas__title">Repensando la programación</figcaption>
+                        <figcaption class="nuest-temas__title">Repensando la <br>programación</figcaption>
                     </figure>
                     <figure class="nuest-temas__fig">
                         <img src="./images/icon3.svg" alt="Bases del código" class="nuest-temas__img">
@@ -86,17 +107,19 @@
                     </figure>
                     <figure class="nuest-temas__fig">
                         <img src="./images/icon2.svg" alt="Seguridad informática" class="nuest-temas__img">
-                        <figcaption class="nuest-temas__title">Seguridad informática</figcaption>
+                        <figcaption class="nuest-temas__title">Seguridad <br>informática</figcaption>
                     </figure>
                 </div>
         </section>
-        <section class="novedades">
-            <h2 class="heading-primary u-text-center heading-primary--white">¿Querés las últimas novedades?</h2>
-            <button class="button u-margin-top">ESCUCHÁ LOS EPISODIOS</button>
+        <section class="novedades u-text-center">
+            <h2 class="heading-primary  heading-primary--white">¿Querés las últimas novedades?</h2>
+            <button class="button u-margin-top button--large">ESCUCHÁ LOS EPISODIOS</button>
         </section>
     </main>
     <footer class="footer">
-        <p class="footer__copy">&copy; 2019— Hello blue pale dot</p>
+        <p class="footer__copy">
+            &copy; 2019— Hello blue pale dot
+        </p>
         <div class="footer__iconbox">
             <a href="http://www.spotify.com" target="_blank"><i class="icon fab fa-spotify"></i></a>
             <a href="http://www.instagram.com" target="_blank"><i class="icon fab fa-instagram"></i></a>
