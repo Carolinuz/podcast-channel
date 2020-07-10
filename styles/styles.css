@@ -9,7 +9,7 @@
 html {
   font-size: 62.5%;
   scroll-padding-top: 8rem;
-  /* height of sticky header, so that anchors work properly and doesn't overlap */
+  /* height of sticky header, so that anchors work properly and don't overlap */
 }
 
 body {
@@ -538,6 +538,7 @@ main {
     -ms-flex-pack: space-evenly;
     justify-content: space-evenly;
     padding-bottom: 0rem;
+    max-width: 144rem; /*To make it responsive for monitors with 1800px and up resolutions   */
   }
   .spotify-pod {
     width: 58.4rem;
@@ -566,6 +567,7 @@ main {
   /* Interviews section */
   .entrevistas__container {
     margin-top: 3.6rem;
+    max-width: 144rem; /*To make it responsive for monitors with 1800px and up resolutions   */
   }
   .entrevistas__img-box {
     display: -webkit-box;
